@@ -54,7 +54,9 @@ public class driver {
             }
             
             System.out.println("\nPress Enter to continue...");
-            scanner.nextLine();
+            if (scanner.hasNextLine()) {
+                scanner.nextLine();
+            }
         }
     }
     
