@@ -77,8 +77,11 @@ public class driver {
     
     private static int getUserChoice() {
         try {
-            int choice = Integer.parseInt(scanner.nextLine().trim());
-            return choice;
+            if (scanner.hasNextLine()) {
+                int choice = Integer.parseInt(scanner.nextLine().trim());
+                return choice;
+            }
+            return -1;
         } catch (NumberFormatException e) {
             return -1;
         }
